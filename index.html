@@ -316,7 +316,7 @@
                     ></span>
                   </div>
                   <input
-                    type="text"
+                    type="number"
                     name="luongCB"
                     id="luongCB"
                     class="form-control input-sm"
@@ -350,7 +350,7 @@
                     ></span>
                   </div>
                   <input
-                    type="text"
+                    type="time"
                     name="gioLam"
                     id="gioLam"
                     class="form-control input-sm"
@@ -372,7 +372,12 @@
             >
               Thêm người dùng
             </button>
-            <button id="btnCapNhat" type="button" class="btn btn-success">
+            <button
+              onclick="capNhatSv()"
+              id="btnCapNhat"
+              type="button"
+              class="btn btn-success"
+            >
               Cập nhật
             </button>
             <button

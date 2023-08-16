@@ -27,11 +27,33 @@ function themNV() {
   localStorage.setItem("DSNV", jsonData);
 
   renderDSNV(dsnv);
+  $("#myModal").modal("hide");
+}
+
+function xoaNV(id) {
+  var index = timViTri(id, dsnv);
+  dsnv.splice(index, 1);
+
+  var jsonData = JSON.stringify(dsnv);
+  localStorage.setItem("DSNV", jsonData);
+
+  renderDSNV(dsnv);
 }
 
 function suaNV(id) {
-  console.log("🚀 ~ file: main.js:9 ~ suaNV ~ id:", id);
+  var index = timViTri(id, dsnv);
+  var nv = dsnv[index];
+  showDataForm(nv);
+  document.getElementById("tknv").disabled = true;
+  $("#myModal").modal("show");
 }
-function xoaNV(id) {
-  console.log("🚀 ~ file: main.js:12 ~ xoaNV ~ id:", id);
+
+function capNhatSv() {
+  var nv = getDataForm();
+  var index = timViTri(nv.taiKhoan, dsnv);
+  dsnv[index] = nv;
+  var jsonData = JSON.stringify(dsnv);
+  localStorage.setItem("DSNV", jsonData);
+  renderDSNV(dsnv);
+  $("#myModal").modal("hide");
 }
