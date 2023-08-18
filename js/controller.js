@@ -4,7 +4,7 @@ function getDataForm() {
   var emailNV = document.getElementById("email").value;
   var passNV = document.getElementById("password").value;
   var ngayLamNV = document.getElementById("datepicker").value;
-  var luongCBNV = document.getElementById("luongCB").value;
+  var luongCBNV = document.getElementById("luongCB").value * 1;
   //
   var chucVuNV = document.getElementById("chucvu").value;
   //
@@ -32,13 +32,16 @@ function renderDSNV(list) {
             <td>${item.email}</td>
             <td>${item.ngayLam}</td>
             <td>${item.chucVu}</td>
-
-            <td>0đ</td>
+            <td>${item.tongLuong()}đ</td>
             <td></td>
             <td>
                 <div class="flex-row">
-                    <button class="btn btn-warning col-5" onclick="suaNV('${item.taiKhoan}')"><i class="fa fa-edit"></i></button>
-                    <button class="btn btn-danger col-5" onclick="xoaNV('${item.taiKhoan}')"><i class="fa fa-trash"></i></button>
+                    <button class="btn btn-warning col-5" onclick="suaNV('${
+                      item.taiKhoan
+                    }')"><i class="fa fa-edit"></i></button>
+                    <button class="btn btn-danger col-5" onclick="xoaNV('${
+                      item.taiKhoan
+                    }')"><i class="fa fa-trash"></i></button>
                 </div>
             </td>
         </tr>

@@ -1,7 +1,7 @@
 var dsnv = [];
 
 var jsonData = localStorage.getItem("DSNV");
-console.log("🚀 ~ file: main.js:4 ~ jsonData:", jsonData);
+// console.log("🚀 ~ file: main.js:4 ~ jsonData:", jsonData);
 if (jsonData != null) {
   var list = JSON.parse(jsonData);
   dsnv = list.map(function (item) {
