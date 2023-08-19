@@ -5,9 +5,7 @@ function getDataForm() {
   var passNV = document.getElementById("password").value;
   var ngayLamNV = document.getElementById("datepicker").value;
   var luongCBNV = document.getElementById("luongCB").value * 1;
-  //
   var chucVuNV = document.getElementById("chucvu").value;
-  //
   var gioLamNV = document.getElementById("gioLam").value;
   return new NhanVien(
     taiKhoanNV,
@@ -32,8 +30,8 @@ function renderDSNV(list) {
             <td>${item.email}</td>
             <td>${item.ngayLam}</td>
             <td>${item.chucVu}</td>
-            <td>${item.tongLuong()}đ</td>
-            <td></td>
+            <td>${item.tongLuongCB()} đ</td>
+            <td>${item.xepLoai()}</td>
             <td>
                 <div class="flex-row">
                     <button class="btn btn-warning col-5" onclick="suaNV('${

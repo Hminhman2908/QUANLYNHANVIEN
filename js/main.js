@@ -44,7 +44,6 @@ function suaNV(id) {
   var index = timViTri(id, dsnv);
   var nv = dsnv[index];
   showDataForm(nv);
-  document.getElementById("tknv").disabled = true;
   $("#myModal").modal("show");
 }
 
